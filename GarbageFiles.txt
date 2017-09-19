@@ -1,0 +1,24 @@
+
+for tr in rows:
+
+    cols = tr.findAll('td')
+
+    if cols is not None and len(cols) > 0:
+        #print cols[0]
+        links = cols[0].find('a').get('href')
+        #print links
+        searchUrl(links)
+        #print links
+        fileLinks.write(str(links))
+
+
+        # cols = [ele.text.strip() for ele in cols]
+        # data.append([ele for ele in cols if ele])
+
+
+        #print cols[0]
+        #print cols[0].find('a').get('href')
+        #link = cols[1].find('a').get('href')
+        #print link
+
+        #print cols[0][0].find('a').get('href')
